@@ -18,9 +18,6 @@ public class FirstActivity extends AppCompatActivity {
         btnNextPage = findViewById(R.id.btn_nextPage);
 
 
-
-
-
         btnNextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
