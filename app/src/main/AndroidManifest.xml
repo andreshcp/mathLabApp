@@ -9,19 +9,49 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MathLabApp">
-        <activity android:name=".MainActivity"
+        <activity android:name=".ThirdQuestionActivity"></activity>
+        <activity
+            android:name=".SecondQuestionActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" >
-        </activity>
-        <activity android:name=".FiveActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".FirstQuestionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".FourActivity"
+        <activity
+            android:name=".NineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ThirdActivity" android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"  />
-        <activity android:name=".SecondActivity"
+        <activity
+            android:name=".EightActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".SevenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".SixActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".FiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".FourActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".ThirdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".SecondActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity

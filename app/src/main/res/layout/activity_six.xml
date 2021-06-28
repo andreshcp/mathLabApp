@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_third_activity"
-    tools:context=".ThirdActivity">
+    android:background="@drawable/background_six_activity"
+    tools:context=".SixActivity">
 
     <Button
         android:id="@+id/btn_nextPage"
