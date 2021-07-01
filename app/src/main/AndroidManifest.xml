@@ -9,15 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MathLabApp">
-        <activity android:name=".ThirdQuestionActivity"></activity>
+        <activity android:name=".FourQuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
         <activity
-            android:name=".SecondQuestionActivity"
+            android:name=".ThirdQuestionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity
-            android:name=".FirstQuestionActivity"
+            android:name=".SecondQuestionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".FirstQuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        </activity>
         <activity
             android:name=".NineActivity"
             android:screenOrientation="portrait"
