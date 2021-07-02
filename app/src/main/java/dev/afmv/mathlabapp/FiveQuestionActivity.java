@@ -13,30 +13,30 @@ import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 
-public class FourQuestionActivity extends AppCompatActivity {
+public class FiveQuestionActivity extends AppCompatActivity {
 
     MediaPlayer playerWin, playerLose;
     LottieAnimationView animLose, animWin;
     TextView tvSelectAnswer;
     Animation scaleUp, scaleDown;
-    Button btn44, btn62, btn42, btnNextPage;
+    Button btn716, btn78, btn1640, btnNextPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_four_question);
+        setContentView(R.layout.activity_five_question);
 
         btnNextPage = findViewById(R.id.btn_nextPage);
-        btn44 = findViewById(R.id.btn44);
-        btn62 = findViewById(R.id.btn62);
-        btn42 = findViewById(R.id.btn42);
+        btn716 = findViewById(R.id.btn_716);
+        btn78 = findViewById(R.id.btn_78);
+        btn1640 = findViewById(R.id.btn_1640);
 
         scaleUp = AnimationUtils.loadAnimation(this,R.anim.scale_up_answer_animation);
         scaleDown = AnimationUtils.loadAnimation(this,R.anim.scale_down_answer_animation);
 
         tvSelectAnswer = findViewById(R.id.tv_select_answer4);
-        animWin = findViewById(R.id.animation_win);
-        animLose = findViewById(R.id.animation_lose);
+        animWin = findViewById(R.id.animation_win_question_five);
+        animLose = findViewById(R.id.animation_lose_question_five);
 
         playerLose = MediaPlayer.create(getApplicationContext(),R.raw.oh_no);
         playerWin = MediaPlayer.create(getApplicationContext(),R.raw.win_sound);
@@ -46,27 +46,26 @@ public class FourQuestionActivity extends AppCompatActivity {
             public void run() {
                 synchronized (this) {
                     try {
-                        wait(5000);
+                        wait(4000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
                 //onBack.start();
-                Intent intent = new Intent(getApplicationContext(),FourQuestionActivity.class);
+                Intent intent = new Intent(getApplicationContext(),FiveQuestionActivity.class);
                 startActivity(intent);
-
             }
         };
 
         btnNextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),FiveQuestionActivity.class);
+                Intent intent = new Intent(getApplicationContext(),SixQuestionActivity.class);
                 startActivity(intent);
             }
         });
 
-        btn44.setOnClickListener(new View.OnClickListener() {
+        btn716.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tvSelectAnswer.setVisibility(View.VISIBLE);
@@ -76,28 +75,28 @@ public class FourQuestionActivity extends AppCompatActivity {
             }
         });
 
-        btn62.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tvSelectAnswer.setVisibility(View.VISIBLE);
-                animLose.setVisibility(View.VISIBLE);
-                playerLose.start();
-                runnable.run();
-            }
-        });
-
-        btn42.setOnClickListener(new View.OnClickListener() {
+        btn78.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 animWin.setVisibility(View.VISIBLE);
                 btnNextPage.setVisibility(View.VISIBLE);
                 playerWin.start();
-                btn62.setVisibility(View.INVISIBLE);
-                btn44.setVisibility(View.INVISIBLE);
+                btn716.setVisibility(View.INVISIBLE);
+                btn78.setVisibility(View.INVISIBLE);
             }
         });
 
+        btn1640.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tvSelectAnswer.setVisibility(View.VISIBLE);
+                animLose.setVisibility(View.VISIBLE);
+                playerLose.start();
+                runnable.run();
+
+            }
+        });
 
     }
 }

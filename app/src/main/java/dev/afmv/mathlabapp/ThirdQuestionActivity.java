@@ -52,7 +52,7 @@ public class ThirdQuestionActivity extends AppCompatActivity {
             public void run() {
                 synchronized (this) {
                     try {
-                        wait(4000);
+                        wait(3000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -109,6 +109,7 @@ public class ThirdQuestionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvSelectAnswer.setVisibility(View.VISIBLE);
                 animLose_4.setVisibility(View.VISIBLE);
+
                 playerLose.start();
                 runnable.run();
             }
@@ -118,6 +119,8 @@ public class ThirdQuestionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 animWin_2.setVisibility(View.VISIBLE);
+                btn4.setVisibility(View.INVISIBLE);
+                btn8.setVisibility(View.INVISIBLE);
                 btnNextPage.setVisibility(View.VISIBLE);
                 playerWin.start();
             }

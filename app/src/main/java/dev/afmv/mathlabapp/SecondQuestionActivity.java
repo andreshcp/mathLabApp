@@ -121,6 +121,9 @@ public class SecondQuestionActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 btnNextPage.setVisibility(View.VISIBLE);
+                iv_1.setVisibility(View.INVISIBLE);
+                iv_2.setVisibility(View.INVISIBLE);
+                iv_4.setVisibility(View.INVISIBLE);
                 animWinner.setVisibility(View.VISIBLE);
                 animLose_8.setVisibility(View.VISIBLE);
                 animLose_8.setAnimation(R.raw.trilo_3);
